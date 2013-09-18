@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		093E28C317DD22CF00671FB3 /* CH13ListBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093E28C217DD22CF00671FB3 /* CH13ListBaseViewController.m */; };
+		093E28C817DD2D8A00671FB3 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 093E28C617DD2D8A00671FB3 /* Icon.png */; };
+		093E28C917DD2D8A00671FB3 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 093E28C717DD2D8A00671FB3 /* Icon@2x.png */; };
+		09B2553017DCF1820017454C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B2552F17DCF1820017454C /* UIKit.framework */; };
+		09B2553217DCF1820017454C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B2553117DCF1820017454C /* Foundation.framework */; };
+		09B2553417DCF1820017454C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B2553317DCF1820017454C /* CoreGraphics.framework */; };
+		09B2553C17DCF1820017454C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B2553B17DCF1820017454C /* main.m */; };
+		09B2554017DCF1820017454C /* CH13AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B2553F17DCF1820017454C /* CH13AppDelegate.m */; };
+		09B2554217DCF1820017454C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B2554117DCF1820017454C /* Default.png */; };
+		09B2554417DCF1820017454C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B2554317DCF1820017454C /* Default@2x.png */; };
+		09B2554617DCF1820017454C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09B2554517DCF1820017454C /* Default-568h@2x.png */; };
+		09B2554917DCF1820017454C /* CH13MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B2554817DCF1820017454C /* CH13MasterViewController.m */; };
+		09B2554C17DCF1820017454C /* CH13SessionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B2554B17DCF1820017454C /* CH13SessionDetailViewController.m */; };
+		09B255B817DD048B0017454C /* CH13MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B255B717DD048B0017454C /* CH13MasterViewController.xib */; };
+		09B255BA17DD04950017454C /* CH13SessionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B255B917DD04950017454C /* CH13SessionDetailViewController.xib */; };
+		09B255D817DD0B110017454C /* CH13_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09B255CE17DD0B110017454C /* CH13_CoreData.xcdatamodeld */; };
+		09B255D917DD0B110017454C /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B255D117DD0B110017454C /* City.m */; };
+		09B255DB17DD0B110017454C /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B255D517DD0B110017454C /* Session.m */; };
+		09B255DC17DD0B110017454C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B255D717DD0B110017454C /* Person.m */; };
+		3129C9737EE2418F9A040A13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD4964CA1F04A2EAE99A224 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		093E28C117DD22CF00671FB3 /* CH13ListBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CH13ListBaseViewController.h; sourceTree = "<group>"; };
+		093E28C217DD22CF00671FB3 /* CH13ListBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CH13ListBaseViewController.m; sourceTree = "<group>"; };
+		093E28C617DD2D8A00671FB3 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		093E28C717DD2D8A00671FB3 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		09B2552C17DCF1820017454C /* CH13 MagicalRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CH13 MagicalRecord.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09B2552F17DCF1820017454C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		09B2553117DCF1820017454C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		09B2553317DCF1820017454C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		09B2553717DCF1820017454C /* CH13 MagicalRecord-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CH13 MagicalRecord-Info.plist"; sourceTree = "<group>"; };
+		09B2553B17DCF1820017454C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		09B2553D17DCF1820017454C /* CH13 MagicalRecord-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CH13 MagicalRecord-Prefix.pch"; sourceTree = "<group>"; };
+		09B2553E17DCF1820017454C /* CH13AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CH13AppDelegate.h; sourceTree = "<group>"; };
+		09B2553F17DCF1820017454C /* CH13AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CH13AppDelegate.m; sourceTree = "<group>"; };
+		09B2554117DCF1820017454C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		09B2554317DCF1820017454C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		09B2554517DCF1820017454C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		09B2554717DCF1820017454C /* CH13MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CH13MasterViewController.h; sourceTree = "<group>"; };
+		09B2554817DCF1820017454C /* CH13MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CH13MasterViewController.m; sourceTree = "<group>"; };
+		09B2554A17DCF1820017454C /* CH13SessionDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CH13SessionDetailViewController.h; sourceTree = "<group>"; };
+		09B2554B17DCF1820017454C /* CH13SessionDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CH13SessionDetailViewController.m; sourceTree = "<group>"; };
+		09B255B717DD048B0017454C /* CH13MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CH13MasterViewController.xib; sourceTree = "<group>"; };
+		09B255B917DD04950017454C /* CH13SessionDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CH13SessionDetailViewController.xib; sourceTree = "<group>"; };
+		09B255CF17DD0B110017454C /* CH13_CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CH13_CoreData.xcdatamodel; sourceTree = "<group>"; };
+		09B255D017DD0B110017454C /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		09B255D117DD0B110017454C /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		09B255D417DD0B110017454C /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		09B255D517DD0B110017454C /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		09B255D617DD0B110017454C /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		09B255D717DD0B110017454C /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		AFD4964CA1F04A2EAE99A224 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4AAB58CB3A04451A0657DE9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09B2552917DCF1820017454C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B2553017DCF1820017454C /* UIKit.framework in Frameworks */,
+				09B2553217DCF1820017454C /* Foundation.framework in Frameworks */,
+				09B2553417DCF1820017454C /* CoreGraphics.framework in Frameworks */,
+				3129C9737EE2418F9A040A13 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		093E28C017DD229500671FB3 /* List Base VC */ = {
+			isa = PBXGroup;
+			children = (
+				093E28C117DD22CF00671FB3 /* CH13ListBaseViewController.h */,
+				093E28C217DD22CF00671FB3 /* CH13ListBaseViewController.m */,
+			);
+			name = "List Base VC";
+			path = ../../../Common/ListBaseViewController;
+			sourceTree = "<group>";
+		};
+		09B2552317DCF1820017454C = {
+			isa = PBXGroup;
+			children = (
+				09B2553517DCF1820017454C /* CH13 MagicalRecord */,
+				09B2552E17DCF1820017454C /* Frameworks */,
+				09B2552D17DCF1820017454C /* Products */,
+				B4AAB58CB3A04451A0657DE9 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		09B2552D17DCF1820017454C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09B2552C17DCF1820017454C /* CH13 MagicalRecord.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09B2552E17DCF1820017454C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09B2552F17DCF1820017454C /* UIKit.framework */,
+				09B2553117DCF1820017454C /* Foundation.framework */,
+				09B2553317DCF1820017454C /* CoreGraphics.framework */,
+				AFD4964CA1F04A2EAE99A224 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09B2553517DCF1820017454C /* CH13 MagicalRecord */ = {
+			isa = PBXGroup;
+			children = (
+				09B2553E17DCF1820017454C /* CH13AppDelegate.h */,
+				09B2553F17DCF1820017454C /* CH13AppDelegate.m */,
+				09B255B317DD03860017454C /* ViewControllers */,
+				09B255B617DD03AF0017454C /* Model */,
+				09B2553617DCF1820017454C /* Supporting Files */,
+			);
+			path = "CH13 MagicalRecord";
+			sourceTree = "<group>";
+		};
+		09B2553617DCF1820017454C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				093E28C617DD2D8A00671FB3 /* Icon.png */,
+				093E28C717DD2D8A00671FB3 /* Icon@2x.png */,
+				09B2553717DCF1820017454C /* CH13 MagicalRecord-Info.plist */,
+				09B2553B17DCF1820017454C /* main.m */,
+				09B2553D17DCF1820017454C /* CH13 MagicalRecord-Prefix.pch */,
+				09B2554117DCF1820017454C /* Default.png */,
+				09B2554317DCF1820017454C /* Default@2x.png */,
+				09B2554517DCF1820017454C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09B255B317DD03860017454C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				093E28C017DD229500671FB3 /* List Base VC */,
+				09B255B417DD03920017454C /* Master VC */,
+				09B255B517DD03990017454C /* Detail VC */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		09B255B417DD03920017454C /* Master VC */ = {
+			isa = PBXGroup;
+			children = (
+				09B2554717DCF1820017454C /* CH13MasterViewController.h */,
+				09B2554817DCF1820017454C /* CH13MasterViewController.m */,
+				09B255B717DD048B0017454C /* CH13MasterViewController.xib */,
+			);
+			name = "Master VC";
+			path = Master;
+			sourceTree = "<group>";
+		};
+		09B255B517DD03990017454C /* Detail VC */ = {
+			isa = PBXGroup;
+			children = (
+				09B2554A17DCF1820017454C /* CH13SessionDetailViewController.h */,
+				09B2554B17DCF1820017454C /* CH13SessionDetailViewController.m */,
+				09B255B917DD04950017454C /* CH13SessionDetailViewController.xib */,
+			);
+			name = "Detail VC";
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		09B255B617DD03AF0017454C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				09B255CE17DD0B110017454C /* CH13_CoreData.xcdatamodeld */,
+				09B255D017DD0B110017454C /* City.h */,
+				09B255D117DD0B110017454C /* City.m */,
+				09B255D417DD0B110017454C /* Session.h */,
+				09B255D517DD0B110017454C /* Session.m */,
+				09B255D617DD0B110017454C /* Person.h */,
+				09B255D717DD0B110017454C /* Person.m */,
+			);
+			name = Model;
+			path = ../../Common/Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09B2552B17DCF1820017454C /* CH13 MagicalRecord */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09B2555517DCF1820017454C /* Build configuration list for PBXNativeTarget "CH13 MagicalRecord" */;
+			buildPhases = (
+				A70DE966F37D4F01AB7A8555 /* Check Pods Manifest.lock */,
+				09B2552817DCF1820017454C /* Sources */,
+				09B2552917DCF1820017454C /* Frameworks */,
+				09B2552A17DCF1820017454C /* Resources */,
+				F2EB423E757B440E88296145 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CH13 MagicalRecord";
+			productName = "CH13 MagicalRecord";
+			productReference = 09B2552C17DCF1820017454C /* CH13 MagicalRecord.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09B2552417DCF1820017454C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CH13;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = AliSoftware;
+			};
+			buildConfigurationList = 09B2552717DCF1820017454C /* Build configuration list for PBXProject "CH13 MagicalRecord" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 09B2552317DCF1820017454C;
+			productRefGroup = 09B2552D17DCF1820017454C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09B2552B17DCF1820017454C /* CH13 MagicalRecord */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09B2552A17DCF1820017454C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B2554217DCF1820017454C /* Default.png in Resources */,
+				09B2554417DCF1820017454C /* Default@2x.png in Resources */,
+				09B2554617DCF1820017454C /* Default-568h@2x.png in Resources */,
+				09B255B817DD048B0017454C /* CH13MasterViewController.xib in Resources */,
+				09B255BA17DD04950017454C /* CH13SessionDetailViewController.xib in Resources */,
+				093E28C817DD2D8A00671FB3 /* Icon.png in Resources */,
+				093E28C917DD2D8A00671FB3 /* Icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A70DE966F37D4F01AB7A8555 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F2EB423E757B440E88296145 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09B2552817DCF1820017454C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B2553C17DCF1820017454C /* main.m in Sources */,
+				09B2554017DCF1820017454C /* CH13AppDelegate.m in Sources */,
+				09B2554917DCF1820017454C /* CH13MasterViewController.m in Sources */,
+				09B2554C17DCF1820017454C /* CH13SessionDetailViewController.m in Sources */,
+				09B255D817DD0B110017454C /* CH13_CoreData.xcdatamodeld in Sources */,
+				09B255D917DD0B110017454C /* City.m in Sources */,
+				09B255DB17DD0B110017454C /* Session.m in Sources */,
+				09B255DC17DD0B110017454C /* Person.m in Sources */,
+				093E28C317DD22CF00671FB3 /* CH13ListBaseViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		09B2555317DCF1820017454C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		09B2555417DCF1820017454C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09B2555617DCF1820017454C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4AAB58CB3A04451A0657DE9 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CH13 MagicalRecord/CH13 MagicalRecord-Prefix.pch";
+				INFOPLIST_FILE = "CH13 MagicalRecord/CH13 MagicalRecord-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		09B2555717DCF1820017454C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4AAB58CB3A04451A0657DE9 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CH13 MagicalRecord/CH13 MagicalRecord-Prefix.pch";
+				INFOPLIST_FILE = "CH13 MagicalRecord/CH13 MagicalRecord-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09B2552717DCF1820017454C /* Build configuration list for PBXProject "CH13 MagicalRecord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09B2555317DCF1820017454C /* Debug */,
+				09B2555417DCF1820017454C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09B2555517DCF1820017454C /* Build configuration list for PBXNativeTarget "CH13 MagicalRecord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09B2555617DCF1820017454C /* Debug */,
+				09B2555717DCF1820017454C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		09B255CE17DD0B110017454C /* CH13_CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				09B255CF17DD0B110017454C /* CH13_CoreData.xcdatamodel */,
+			);
+			currentVersion = 09B255CF17DD0B110017454C /* CH13_CoreData.xcdatamodel */;
+			path = CH13_CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 09B2552417DCF1820017454C /* Project object */;
+}

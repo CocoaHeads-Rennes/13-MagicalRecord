@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CH13SessionDetailViewController">
+            <connections>
+                <outlet property="bottomSpaceConstraint" destination="50Q-Rh-5XE" id="rXX-7K-dPH"/>
+                <outlet property="cityButton" destination="66" id="bKG-vp-pHH"/>
+                <outlet property="dateField" destination="19" id="57"/>
+                <outlet property="lecturerButton" destination="81" id="J4e-pk-lba"/>
+                <outlet property="similarSessionsField" destination="JPa-hC-W3f" id="BCR-8b-niP"/>
+                <outlet property="subjectField" destination="47" id="58"/>
+                <outlet property="summaryField" destination="36" id="59"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gae-Cw-Tcp">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="352"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                            <rect key="frame" x="20" y="23" width="65" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="19">
+                            <rect key="frame" x="93" y="20" width="200" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="UKz-Lu-U9E"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="62"/>
+                            </connections>
+                        </textField>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Summary" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25">
+                            <rect key="frame" x="20" y="96" width="273" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36">
+                            <rect key="frame" x="20" y="125" width="273" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="p5D-Up-xM7"/>
+                            </constraints>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="60"/>
+                            </connections>
+                        </textView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Subject" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46">
+                            <rect key="frame" x="20" y="61" width="64" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="47">
+                            <rect key="frame" x="92" y="58" width="201" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="61"/>
+                            </connections>
+                        </textField>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63">
+                            <rect key="frame" x="20" y="237" width="64" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66">
+                            <rect key="frame" x="92" y="233" width="201" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="City">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="editCity:" destination="-1" eventType="touchUpInside" id="100"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Lecturer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80">
+                            <rect key="frame" x="20" y="275" width="64" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81">
+                            <rect key="frame" x="92" y="271" width="201" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Lecturer">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="editLecturer:" destination="-1" eventType="touchUpInside" id="101"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Similar Sessions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80c-MZ-JYy">
+                            <rect key="frame" x="20" y="309" width="273" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPa-hC-W3f">
+                            <rect key="frame" x="20" y="338" width="273" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="7jR-mo-WhK"/>
+                            </constraints>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="ECS-1h-fYv"/>
+                            </connections>
+                        </textView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="66" firstAttribute="leading" secondItem="63" secondAttribute="trailing" constant="8" symbolic="YES" id="0mq-9O-ZTe"/>
+                        <constraint firstAttribute="bottom" secondItem="JPa-hC-W3f" secondAttribute="bottom" constant="20" symbolic="YES" id="16i-b6-sC5"/>
+                        <constraint firstItem="46" firstAttribute="leading" secondItem="25" secondAttribute="leading" id="1j8-Zb-D8m"/>
+                        <constraint firstItem="47" firstAttribute="top" secondItem="19" secondAttribute="bottom" constant="8" symbolic="YES" id="1pN-ae-ZvG"/>
+                        <constraint firstItem="47" firstAttribute="leading" secondItem="46" secondAttribute="trailing" constant="8" symbolic="YES" id="3DI-lm-p6R"/>
+                        <constraint firstItem="47" firstAttribute="baseline" secondItem="46" secondAttribute="baseline" id="5gR-y0-jmI"/>
+                        <constraint firstItem="66" firstAttribute="leading" secondItem="81" secondAttribute="leading" id="8QX-jJ-Bbo"/>
+                        <constraint firstItem="19" firstAttribute="leading" secondItem="12" secondAttribute="trailing" constant="8" symbolic="YES" id="AL5-kC-itQ"/>
+                        <constraint firstItem="JPa-hC-W3f" firstAttribute="top" secondItem="80c-MZ-JYy" secondAttribute="bottom" constant="8" symbolic="YES" id="AWw-sj-Fx2"/>
+                        <constraint firstItem="36" firstAttribute="top" secondItem="25" secondAttribute="bottom" constant="8" symbolic="YES" id="E3I-lw-hpu"/>
+                        <constraint firstItem="80" firstAttribute="leading" secondItem="80c-MZ-JYy" secondAttribute="leading" id="FtA-ua-937"/>
+                        <constraint firstItem="12" firstAttribute="centerX" secondItem="46" secondAttribute="centerX" id="GhP-t1-19L"/>
+                        <constraint firstItem="12" firstAttribute="leading" secondItem="46" secondAttribute="leading" id="HHR-GD-3az"/>
+                        <constraint firstItem="47" firstAttribute="leading" secondItem="66" secondAttribute="leading" id="Ibc-Bo-umD"/>
+                        <constraint firstItem="81" firstAttribute="leading" secondItem="80" secondAttribute="trailing" constant="8" symbolic="YES" id="JG8-5n-YdO"/>
+                        <constraint firstItem="80c-MZ-JYy" firstAttribute="trailing" secondItem="JPa-hC-W3f" secondAttribute="trailing" id="Ohq-Q2-c9U"/>
+                        <constraint firstItem="66" firstAttribute="trailing" secondItem="81" secondAttribute="trailing" id="Ot0-Wm-lWJ"/>
+                        <constraint firstItem="19" firstAttribute="baseline" secondItem="12" secondAttribute="baseline" id="RcS-3o-3Ja"/>
+                        <constraint firstItem="81" firstAttribute="trailing" secondItem="80c-MZ-JYy" secondAttribute="trailing" id="Rur-wZ-UCM"/>
+                        <constraint firstItem="12" firstAttribute="leading" secondItem="Gae-Cw-Tcp" secondAttribute="leading" constant="20" symbolic="YES" id="Vja-Ry-0vt"/>
+                        <constraint firstItem="66" firstAttribute="trailing" secondItem="36" secondAttribute="trailing" id="Wgx-fK-nVL"/>
+                        <constraint firstItem="81" firstAttribute="baseline" secondItem="80" secondAttribute="baseline" id="Zjn-xp-X3l"/>
+                        <constraint firstItem="25" firstAttribute="trailing" secondItem="47" secondAttribute="trailing" id="a7o-ti-X6u"/>
+                        <constraint firstItem="80c-MZ-JYy" firstAttribute="top" secondItem="81" secondAttribute="bottom" constant="8" symbolic="YES" id="bji-Ch-caM"/>
+                        <constraint firstItem="81" firstAttribute="top" secondItem="66" secondAttribute="bottom" constant="8" symbolic="YES" id="exv-GE-SuN"/>
+                        <constraint firstItem="19" firstAttribute="top" secondItem="Gae-Cw-Tcp" secondAttribute="top" constant="20" symbolic="YES" id="fGI-XS-bFq"/>
+                        <constraint firstItem="66" firstAttribute="top" secondItem="36" secondAttribute="bottom" constant="8" symbolic="YES" id="hYr-FD-mcW"/>
+                        <constraint firstItem="63" firstAttribute="leading" secondItem="80" secondAttribute="leading" id="jWM-4f-fwy"/>
+                        <constraint firstItem="25" firstAttribute="trailing" secondItem="36" secondAttribute="trailing" id="kno-98-u0T"/>
+                        <constraint firstItem="80c-MZ-JYy" firstAttribute="leading" secondItem="JPa-hC-W3f" secondAttribute="leading" id="lbb-69-8qT"/>
+                        <constraint firstItem="25" firstAttribute="top" secondItem="47" secondAttribute="bottom" constant="8" symbolic="YES" id="oWS-AN-AYN"/>
+                        <constraint firstItem="63" firstAttribute="leading" secondItem="36" secondAttribute="leading" id="pjU-Eg-eha"/>
+                        <constraint firstItem="36" firstAttribute="leading" secondItem="25" secondAttribute="leading" id="s1d-In-IDd"/>
+                        <constraint firstAttribute="trailing" secondItem="19" secondAttribute="trailing" constant="20" symbolic="YES" id="tcC-bT-pwy"/>
+                        <constraint firstItem="66" firstAttribute="baseline" secondItem="63" secondAttribute="baseline" id="wGu-VB-p2n"/>
+                        <constraint firstItem="47" firstAttribute="trailing" secondItem="19" secondAttribute="trailing" id="yyQ-7a-Wt4"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Gae-Cw-Tcp" secondAttribute="bottom" constant="216" id="50Q-Rh-5XE"/>
+                <constraint firstItem="Gae-Cw-Tcp" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="DDD-tD-gSy"/>
+                <constraint firstAttribute="trailing" secondItem="Gae-Cw-Tcp" secondAttribute="trailing" id="aV9-JW-MNa"/>
+                <constraint firstItem="Gae-Cw-Tcp" firstAttribute="top" secondItem="1" secondAttribute="top" id="dJC-rx-PX8"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

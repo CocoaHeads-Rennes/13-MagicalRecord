@@ -1,0 +1,22 @@
+//
+// Prefix header for all source files of the 'CH13 CoreData' target in the 'CH13 CoreData' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+#endif
+
+#define GENERATE_PRAGMA(x) _Pragma(#x)
+#define STRINGIZE(idx) #idx
+#define GENERATE_BOOKMARK(num) GENERATE_PRAGMA(message("Bookmark #" STRINGIZE(num)))
+
+#define _BOOKMARK_ GENERATE_BOOKMARK( __COUNTER__ )
+

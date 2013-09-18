@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12E55" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="City" representedClassName="City" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="zipcode" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Session" inverseName="city" inverseEntity="Session" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES">
+        <attribute name="firstname" attributeType="String" syncable="YES"/>
+        <attribute name="lastname" attributeType="String" syncable="YES"/>
+        <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Session" inverseName="lecturer" inverseEntity="Session" syncable="YES"/>
+    </entity>
+    <entity name="Session" representedClassName="Session">
+        <attribute name="date" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <attribute name="subject" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="City" inverseName="sessions" inverseEntity="City" syncable="YES"/>
+        <relationship name="lecturer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="sessions" inverseEntity="Person" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <elements>
+        <element name="City" positionX="-1370" positionY="-1969" width="128" height="88"/>
+        <element name="Session" positionX="-1559" positionY="-2061" width="128" height="118"/>
+        <element name="Person" positionX="-1748" positionY="-1978" width="128" height="88"/>
+    </elements>
+</model>

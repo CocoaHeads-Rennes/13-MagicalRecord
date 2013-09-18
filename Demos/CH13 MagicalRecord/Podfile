@@ -1,0 +1,8 @@
+# Project Definition
+xcodeproj "CH13 MagicalRecord"
+platform :ios, '5.0'
+
+
+
+# Pods used by project
+pod "MagicalRecord", "~> 2.0"
