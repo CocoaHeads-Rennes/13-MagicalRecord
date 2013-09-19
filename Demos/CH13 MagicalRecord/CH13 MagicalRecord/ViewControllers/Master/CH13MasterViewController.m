@@ -68,7 +68,6 @@ static NSString* const kDefaultSessionName = @"Nouvelle Session";
 ///////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - CoreData Mess
 
-_BOOKMARK_
 - (IBAction)fillObjectGraph
 {
     // Fill database with some default objects
@@ -176,7 +175,7 @@ _BOOKMARK_
 _BOOKMARK_
 - (NSFetchedResultsController *)buildFetchedResultsController
 {
-    return [Session MR_fetchAllSortedBy:@"date" ascending:NO withPredicate:nil groupBy:@"city.name" delegate:self];
+    return [Session fetchAllSortedBy:@"city.name,date" ascending:NO withPredicate:nil groupBy:@"city.name" delegate:self];
 }
 
 

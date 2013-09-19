@@ -68,7 +68,6 @@ static NSString* const kDefaultSessionName = @"Nouvelle Session";
 ///////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - CoreData Mess
 
-_BOOKMARK_
 - (IBAction)fillObjectGraph
 {
     // Fill database with some default objects
@@ -235,8 +234,9 @@ _BOOKMARK_
     [fetchRequest setFetchBatchSize:20];
         
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
-    NSArray *sortDescriptors = @[sortDescriptor];
+    NSSortDescriptor *sortDescriptorCity = [[NSSortDescriptor alloc] initWithKey:@"city.name" ascending:NO];
+    NSSortDescriptor *sortDescriptorDate = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+    NSArray *sortDescriptors = @[sortDescriptorCity, sortDescriptorDate];
     [fetchRequest setSortDescriptors:sortDescriptors];
     
     // Edit the section name key path and cache name if appropriate.
