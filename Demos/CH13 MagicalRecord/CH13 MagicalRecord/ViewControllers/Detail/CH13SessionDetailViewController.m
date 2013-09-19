@@ -130,19 +130,8 @@
 _BOOKMARK_
 - (NSArray*)findSimilarSessions
 {
-    NSManagedObjectContext* moc = self.session.managedObjectContext;
-    NSEntityDescription* entity = [NSEntityDescription entityForName:@"Session" inManagedObjectContext:moc];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entity];
-    
-    // Set example predicate and sort orderings...
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"subject CONTAINS[c] %@ AND self != %@", self.session.subject, self.session];
-    [request setPredicate:predicate];
-    
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
-    [request setSortDescriptors:@[sortDescriptor]];
-    
-    return [self.session.managedObjectContext executeFetchRequest:request error:nil];
+    return [Session findAllSortedBy:@"date" ascending:NO withPredicate:predicate];
 }
 
 
