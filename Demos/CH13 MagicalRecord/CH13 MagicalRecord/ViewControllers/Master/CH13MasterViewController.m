@@ -23,7 +23,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"MagicalRecord";
+        self.title = @"CoreData";
     }
     return self;
 }
@@ -127,9 +127,23 @@ static NSString* const kDefaultSessionName = @"Nouvelle Session";
 _BOOKMARK_
 - (IBAction)emptyGraphObject
 {
-    [City truncateAll];
-    [Session truncateAll];
-    [Person truncateAll];
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSError *error;
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    for (NSString* entityName in @[@"City", @"Session", @"Person"])
+    {
+        NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
+        [fetchRequest setEntity:entity];
+        NSArray *objects = [_managedObjectContext executeFetchRequest:fetchRequest error:&error];
+        
+        for (NSManagedObject *obj in objects)
+        {
+            [context deleteObject:obj];
+        }
+    }
+    
+    [context save:nil];
 }
 
 _BOOKMARK_
@@ -138,34 +152,69 @@ _BOOKMARK_
                                   summary:(NSString*)summary
                                  lecturer:(Person*)lecturer
 {
-    Session* session = [Session createEntity];
-    session.subject = subject;
-    session.date = date;
-    session.summary = summary;
-    session.lecturer = lecturer;
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSEntityDescription* sessionEntity = [NSEntityDescription entityForName:@"Session" inManagedObjectContext:context];
+
+    NSManagedObject* session = [[NSManagedObject alloc] initWithEntity:sessionEntity insertIntoManagedObjectContext:context];
+    [session setValue:subject forKey:@"subject"];
+    [session setValue:date forKey:@"date"];
+    [session setValue:summary forKey:@"summary"];
+    [session setValue:lecturer forKey:@"lecturer"];
     return session;
 }
 
 _BOOKMARK_
 - (City*)findOrCreateCityWithName:(NSString*)cityName
 {
-    City* foundCity = [City findFirstByAttribute:@"name" withValue:cityName];
-    if (!foundCity)
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    
+    // Find the city if it exists, create it if not
+    NSManagedObject* foundCity = nil;
+    NSEntityDescription* cityEntity = [NSEntityDescription entityForName:@"City" inManagedObjectContext:context];
+    
+    NSFetchRequest* cityRequest = [[NSFetchRequest alloc] init];
+    [cityRequest setEntity:cityEntity];
+    
+    NSPredicate* cityPredicate = [NSPredicate predicateWithFormat:@"name == %@", cityName];
+    [cityRequest setPredicate:cityPredicate];
+    [cityRequest setFetchLimit:1];
+    
+    NSArray* cities = [context executeFetchRequest:cityRequest error:nil];
+    if (cities.count == 0)
     {
-        foundCity = [City createEntity];
-        foundCity.name = cityName;
+        foundCity = [[NSManagedObject alloc] initWithEntity:cityEntity insertIntoManagedObjectContext:context];
+        [foundCity setValue:cityName forKey:@"name"];
     }
-    return foundCity;
+    else
+    {
+        foundCity = [cities objectAtIndex:0];
+    }
+    return (City*)foundCity;
 }
 
 _BOOKMARK_
 - (Person*)findOrCreatePersonWithFirstName:(NSString*)firstName lastName:(NSString*)lastName
 {
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSEntityDescription* personEntity = [NSEntityDescription entityForName:@"Person" inManagedObjectContext:context];
+    
+    NSFetchRequest* personRequest = [[NSFetchRequest alloc] init];
+    [personRequest setEntity:personEntity];
+    
     NSPredicate* personPredicate = [NSPredicate predicateWithFormat:@"firstname == %@ AND lastname == %@", firstName, lastName];
-    Person* person = [Person findFirstWithPredicate:personPredicate];
-    if (!person)
+    [personRequest setPredicate:personPredicate];
+    [personRequest setFetchLimit:1];
+
+    NSArray* persons = [context executeFetchRequest:personRequest error:nil];
+    Person* person;
+    if (persons.count > 0)
     {
-        person = [Person createEntity];
+        person = persons[0];
+    }
+    else
+    {
+        person = (Person*)[[NSManagedObject alloc] initWithEntity:personEntity insertIntoManagedObjectContext:context];
+        
         person.firstname = firstName;
         person.lastname = lastName;
     }
@@ -175,8 +224,32 @@ _BOOKMARK_
 _BOOKMARK_
 - (NSFetchedResultsController *)buildFetchedResultsController
 {
-    return [Session fetchAllSortedBy:@"city.name,date" ascending:NO withPredicate:nil groupBy:@"city.name" delegate:self];
-}
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    // Edit the entity name as appropriate.
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Session" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    // Set the batch size to a suitable number.
+    [fetchRequest setFetchBatchSize:20];
+        
+    // Edit the sort key as appropriate.
+    NSSortDescriptor *sortDescriptorCity = [[NSSortDescriptor alloc] initWithKey:@"city.name" ascending:NO];
+    NSSortDescriptor *sortDescriptorDate = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+    NSArray *sortDescriptors = @[sortDescriptorCity, sortDescriptorDate];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    // Edit the section name key path and cache name if appropriate.
+    // nil for section name key path means "no sections".
+    NSFetchedResultsController *aFetchedResultsController =
+    [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                        managedObjectContext:self.managedObjectContext
+                                          sectionNameKeyPath:@"city.name"
+                                                   cacheName:@"Master"];
+    aFetchedResultsController.delegate = self;
+    
+    return aFetchedResultsController;
+}    
 
 
 @end
